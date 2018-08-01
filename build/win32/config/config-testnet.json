@@ -10,7 +10,7 @@
 			"heartbeat_interval": 60,
 			"listen_port": 26001,
 			"target_peer_connection": 10,
-			"known_peers": ["seed1.chaintest.io:26001","seed2.chaintest.io:26001","seed3.chaintest.io:26001","seed4.chaintest.io:26001"]
+			"known_peers": ["seed1.bumotest.io:26001","seed2.bumotest.io:26001","seed3.bumotest.io:26001","seed4.bumotest.io:26001"]
 		}
 	},
 	"webserver": {
@@ -41,7 +41,7 @@
 		]
 	},
 	"logger": {
-		"path": "log/bubi.log",
+		"path": "log/chain.log",
 		"dest": "FILE|STDOUT|STDERR",
 		"level": "INFO|WARNING|ERROR|FATAL",
 		"time_capacity": 1,

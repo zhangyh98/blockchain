@@ -47,7 +47,7 @@
         "validators": ["buQBwe7LZYCYHfxiEGb1RE9XC9kN2qrGXWCY"]
     },
     "logger": {
-        "path": "log/bubi.log",
+        "path": "log/chain.log",
         "dest": "FILE|STDOUT|STDERR",
         "level": "INFO|WARNING|ERROR|FATAL",
         "time_capacity": 1,

@@ -12,13 +12,13 @@
 			"listen_port": 16001,
 			"target_peer_connection": 10,
 			"known_peers": [
-				"seed1.chain.io:16001", 
-				"seed2.chain.io:16001", 
-				"seed3.chain.io:16001", 
-				"seed4.chain.io:16001", 
-				"seed5.chain.io:16001", 
-				"seed6.chain.io:16001", 
-				"seed7.chain.io:16001"
+				"seed1.bumo.io:16001", 
+				"seed2.bumo.io:16001", 
+				"seed3.bumo.io:16001", 
+				"seed4.bumo.io:16001", 
+				"seed5.bumo.io:16001", 
+				"seed6.bumo.io:16001", 
+				"seed7.bumo.io:16001"
 			]
 		}
 	},
@@ -57,7 +57,7 @@
 		]
 	},
 	"logger": {
-		"path": "log/bubi.log",
+		"path": "log/chain.log",
 		"dest": "FILE|STDOUT|STDERR",
 		"level": "INFO|WARNING|ERROR|FATAL",
 		"time_capacity": 1,

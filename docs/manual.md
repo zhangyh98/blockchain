@@ -43,7 +43,7 @@ English | [中文](manual_CN.md)
 
 ## __Compile__ 
 
-If you don't want to compile the source code, you can use the archive package directly, [archive package download](https://github.com/bumoproject/bumo/releases/ "download")，[use archive packet deploy](#use-archive-packet-deploy)
+If you don't want to compile the source code, you can use the archive package directly, [archive package download](https://github.com/bubicn/bubichain-x/releases "download")，[use archive packet deploy](#use-archive-packet-deploy)
 
 ### Linux
 CHAIN is currently available for Ubuntu, Centos and most of the operating systems, it is recommended that you have Ubuntu 14.04 or Centos 7. The following demo is based on Ubuntu 14.04 .

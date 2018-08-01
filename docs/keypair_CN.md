@@ -539,7 +539,7 @@ https://developers.google.com/protocol-buffers/docs/overview
 1. 通过GET获取待发起交易账户的nonce值。
 
 ```
-    GET http://seed1.bumotest.io:26002/getAccount?address=buQsurH1M4rjLkfjzkxR9KXJ6jSu2r9xBNEw
+    GET http://ip:port/getAccount?address=buQsurH1M4rjLkfjzkxR9KXJ6jSu2r9xBNEw
 ```
 
 得到的响应报文：
@@ -619,7 +619,7 @@ https://developers.google.com/protocol-buffers/docs/overview
 3. 对交易数据进行序列化处理。
 
 ```
-         POST http://seed1.bumotest.io:26002/getTransactionBlob
+         POST http://ip:port/getTransactionBlob
 ```
 
 请求报文: 
@@ -670,7 +670,7 @@ https://developers.google.com/protocol-buffers/docs/overview
 6. 通过POST提交交易。
 
 ```
-     POST http://seed1.bumotest.io/submitTransaction
+     POST http://ip/submitTransaction
      
 ```
 
@@ -694,7 +694,7 @@ https://developers.google.com/protocol-buffers/docs/overview
 1. 通过GET获取待发起交易账户的nonce值。
 
 ```
-    GET http://seed1.bumotest.io:26002/getAccount?address=buQsurH1M4rjLkfjzkxR9KXJ6jSu2r9xBNEw
+    GET http://ip:port/getAccount?address=buQsurH1M4rjLkfjzkxR9KXJ6jSu2r9xBNEw
 ```
 
 得到的响应报文：
@@ -808,7 +808,7 @@ https://developers.google.com/protocol-buffers/docs/overview
 5. 通过POST提交交易。
 
 ```
-     POST http://seed1.bumotest.io/submitTransaction
+     POST http://ip/submitTransaction
      
 ```
 得到的响应报文：
