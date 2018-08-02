@@ -28,32 +28,32 @@ make chain_version=$v
 
 mkdir -p pack
 cd pack/
-rm -rf buchain/ 
-mkdir buchain
-mkdir buchain/config
-mkdir buchain/data
-mkdir buchain/jslib
-mkdir buchain/bin
-mkdir buchain/log
-mkdir buchain/scripts
-mkdir buchain/coredump
-cp ../build/win32/jslib/jslint.js buchain/jslib/
-cp ../build/win32/config/config-mainnet.json buchain/config/
-cp ../build/win32/config/config-testnet.json buchain/config/
-cp ../build/win32/config/config-single.json  buchain/config/
-cp ../build/win32/config/ReadMe.txt  buchain/config/
-cp ../deploy/chain  buchain/scripts/
-cp ../deploy/chaind  buchain/scripts/
-cp ../deploy/start-stop-daemon  buchain/scripts/
-cp ../bin/chain buchain/bin/
-cp ../bin/chaind buchain/bin/
-cp ../src/3rd/v8_target/linux/*.bin buchain/bin/
-cp ../src/3rd/v8_target/linux/*.dat buchain/bin/
+rm -rf bubichain/ 
+mkdir bubichain
+mkdir bubichain/config
+mkdir bubichain/data
+mkdir bubichain/jslib
+mkdir bubichain/bin
+mkdir bubichain/log
+mkdir bubichain/scripts
+mkdir bubichain/coredump
+cp ../build/win32/jslib/jslint.js bubichain/jslib/
+cp ../build/win32/config/config-mainnet.json bubichain/config/
+cp ../build/win32/config/config-testnet.json bubichain/config/
+cp ../build/win32/config/config-single.json  bubichain/config/
+cp ../build/win32/config/ReadMe.txt  bubichain/config/
+cp ../deploy/chain  bubichain/scripts/
+cp ../deploy/chaind  bubichain/scripts/
+cp ../deploy/start-stop-daemon  bubichain/scripts/
+cp ../bin/chain bubichain/bin/
+cp ../bin/chaind bubichain/bin/
+cp ../src/3rd/v8_target/linux/*.bin bubichain/bin/
+cp ../src/3rd/v8_target/linux/*.dat bubichain/bin/
 
-chmod +x buchain/scripts/*
+chmod +x bubichain/scripts/*
 
-tar czvf buchain-linux-$DATE-$v.tar.gz buchain/
-rm -rf buchain/ 
+tar czvf bubichain-linux-$DATE-$v.tar.gz bubichain/
+rm -rf bubichain/ 
 
 echo "build ok...."
 

@@ -29,32 +29,32 @@ cd build/win32
 rd /s /Q ".\pack\"
 del output.log
 
-"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\devenv.exe" /Clean "Release|Win32" Chain.vs12.sln
+"D:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\devenv.exe" /Clean "Release|Win32" Chain.vs12.sln
 
-"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\devenv.exe" Chain.vs12.sln  /rebuild RELEASE /out output.log
+"D:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\devenv.exe" Chain.vs12.sln  /rebuild RELEASE /out output.log
 
 mkdir pack
 cd pack
-mkdir buchain
-mkdir buchain\bin
-mkdir buchain\config
-mkdir buchain\data
-mkdir buchain\jslib
-mkdir buchain\log
+mkdir bubichain
+mkdir bubichain\bin
+mkdir bubichain\config
+mkdir bubichain\data
+mkdir bubichain\jslib
+mkdir bubichain\log
 
-copy ..\bin\Chain.exe buchain\bin
-copy ..\bin\*.bin buchain\bin
-copy ..\bin\*.dat buchain\bin
-copy ..\bin\*.dll buchain\bin
-copy ..\config\config-mainnet.json buchain\config\
-copy ..\config\config-testnet.json buchain\config\
-copy ..\config\config-single.json  buchain\config\
-copy ..\config\ReadMe.txt  buchain\config\
-copy ..\jslib\jslint.js buchain\jslib\
+copy ..\bin\Chain.exe bubichain\bin
+copy ..\bin\*.bin bubichain\bin
+copy ..\bin\*.dat bubichain\bin
+copy ..\bin\*.dll bubichain\bin
+copy ..\config\config-mainnet.json bubichain\config\
+copy ..\config\config-testnet.json bubichain\config\
+copy ..\config\config-single.json  bubichain\config\
+copy ..\config\ReadMe.txt  bubichain\config\
+copy ..\jslib\jslint.js bubichain\jslib\
 
-..\zip.exe -r buchain-win-%CURRENT_DATE_TIME_STAMP%.zip buchain
+..\zip.exe -r bubichain-win-%CURRENT_DATE_TIME_STAMP%.zip bubichain
 
-rd /s /Q ".\buchain\"
+rd /s /Q ".\bubichain\"
 
 cd ../
 	

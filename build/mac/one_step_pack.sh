@@ -28,25 +28,25 @@ make chain_version=$v
 
 mkdir -p pack
 cd pack/
-rm -rf buchain/ 
-mkdir buchain
-mkdir buchain/config
-mkdir buchain/data
-mkdir buchain/jslib
-mkdir buchain/bin
-mkdir buchain/log
-mkdir buchain/coredump
-cp ../build/win32/jslib/jslint.js buchain/jslib/
-cp ../build/win32/config/config-mainnet.json buchain/config/
-cp ../build/win32/config/config-testnet.json buchain/config/
-cp ../build/win32/config/config-single.json  buchain/config/
-cp ../build/win32/config/ReadMe.txt  buchain/config/
-cp ../bin/chain buchain/bin/
-cp ../src/3rd/v8_target/mac/*.bin buchain/bin/
-cp ../src/3rd/v8_target/mac/*.dat buchain/bin/
+rm -rf bubichain/ 
+mkdir bubichain
+mkdir bubichain/config
+mkdir bubichain/data
+mkdir bubichain/jslib
+mkdir bubichain/bin
+mkdir bubichain/log
+mkdir bubichain/coredump
+cp ../build/win32/jslib/jslint.js bubichain/jslib/
+cp ../build/win32/config/config-mainnet.json bubichain/config/
+cp ../build/win32/config/config-testnet.json bubichain/config/
+cp ../build/win32/config/config-single.json  bubichain/config/
+cp ../build/win32/config/ReadMe.txt  bubichain/config/
+cp ../bin/chain bubichain/bin/
+cp ../src/3rd/v8_target/mac/*.bin bubichain/bin/
+cp ../src/3rd/v8_target/mac/*.dat bubichain/bin/
 
-tar czvf buchain-mac-$DATE-$v.tar.gz buchain/
-rm -rf buchain/ 
+tar czvf bubichain-mac-$DATE-$v.tar.gz bubichain/
+rm -rf bubichain/ 
 
 echo "build ok...."
 
