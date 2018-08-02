@@ -3,7 +3,7 @@
 
 
  
-## __What is CHAIN__
+## __What is BUBICHAIN__
 Chain is focusing on next generation platform of public Blockchain infrastructure and building a future ecosystem of Ubiquitous Trust Network. Therefore, value will be transferred freely on Blockchain just as information is transferred freely on Internet today. Lots of decentralized applications, such as digital assets and Internet of things, can be developed and deployed rapidly over CHAIN network.
 
 ## __Features__
