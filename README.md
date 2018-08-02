@@ -29,4 +29,4 @@ Chain is focusing on next generation platform of public Blockchain infrastructur
  - [development document](docs/develop.md "") 
 
 ## __License__
-Chain blockchain is under the GPLv3 license.
+Chain blockchain is under the bubichain license.
