@@ -1,3 +1,5 @@
+[English](README.md) | 中文
+
 # P2P 网络
 
 ## 功能介绍
