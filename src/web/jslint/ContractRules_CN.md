@@ -1,12 +1,12 @@
 # **智能合约语法说明**
 Chain 智能合约使用 `JaveScript` 语言编写，为了方便开发者更规范的，更安全的开发合约，在做合约语法检测时候，使用了 JSLint 做限制。[参考JSLint GitHub](./)。编辑合约时候，首先需要在 JSLint 里检测通过，才可以被 Chain 系统检测为一个合法的合约。
 
-JSLint 的标准语法在官方网站有详尽的说明。本文档的目的是作为一个完善文档，整理了原有的 JSLint 语法规则，同时对 Chain 修改后的规则进行了补充说明，文档会举例说明其用法。对于本文没有提到的部分，请参考 [JsLint 帮助手册](http://chain.chinacloudapp.cn:36002/help.html)。
+JSLint 的标准语法在官方网站有详尽的说明。本文档的目的是作为一个完善文档，整理了原有的 JSLint 语法规则，同时对 Chain 修改后的规则进行了补充说明，文档会举例说明其用法。对于本文没有提到的部分，请参考 [JsLint 帮助手册](http://40.125.212.116:36002/help.html)。
 
 或者通过节点服务器、钱包地址访问文档 127.0.0.1:36002/jslint/help.html
 
 ## **检测工具**
-   JSLint 检测工具地址：[JSLint 语法检测工具](http://chain.chinacloudapp.cn:36002/jslint.html "JSLint 语法检测工具")
+   JSLint 检测工具地址：[JSLint 语法检测工具](http://40.125.212.116:36002/jslint.html "JSLint 语法检测工具")
 
    或者通过节点服务器、钱包地址使用工具 127.0.0.1:36002/jslint/index.html
 
