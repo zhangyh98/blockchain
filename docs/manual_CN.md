@@ -61,7 +61,7 @@ cd ../
 make
 ```
 
-生成的可执行文件目录：bubichain/bin
+生成的可执行文件目录：bubichain-x/bin
 
 ### MAC
 - 支持 MAC OS X 10.11.4 及以上系统版本
@@ -95,7 +95,7 @@ make
 
 生成的编译临时目录:bubichain-x/bulid/mac/
 
-生成的可执行文件目录：bubichain/bin/
+生成的可执行文件目录：bubichain-x/bin/
 
 ### Windows
 - 支持 WinXP/2003/Vista/7/8/10平台编译，推荐使用 Win10
