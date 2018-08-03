@@ -1,3 +1,5 @@
+English | [中文](README_CN.md) 
+
 # P2P Network
 
 ## Introduction
