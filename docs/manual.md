@@ -101,9 +101,9 @@ cd ../
 make
  ```
 
-Temporary executable program dir:bubichain/bulid/mac/
+Temporary executable program dir:bubichain-x/bulid/mac/
 
-Executable program dir:bubichain/bin/
+Executable program dir:bubichain-x/bin/
 
 ### Windows
 - Supports WinXP/2003/Vista/7/8/10 to building，Recommended Win10
