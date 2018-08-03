@@ -29,4 +29,4 @@ BUBICHAIN is focusing on next generation platform of public Blockchain infrastru
  - [development document](docs/develop.md "") 
 
 ## __License__
-BUBUCHAIN is under the bubichain license.
+BUBICHAIN is under the bubichain license.
