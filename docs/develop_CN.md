@@ -1,10 +1,10 @@
 [English](develop.md) | 中文
 
-# CHAIN 区块链开发文档
+# BUBI 区块链开发文档
 
 <!-- TOC -->
 
-- [CHAIN区块链开发文档](#CHAIN区块链开发文档)
+- [BUBI区块链开发文档](#BUBI区块链开发文档)
     - [基础知识](#基础知识)
         - [了解protocol buffer3](#了解protocol-buffer3)
         - [protocol buffer 3和json](#protocol-buffer-3和json)
@@ -66,7 +66,7 @@
 
 ### 了解protocol buffer3
 
-CHAIN区块链是用protocol buffer 3序列化数据的，protocol buffer 3是google推出的数据序列化协议，您如果不了解protocol buffer 3，请点击[https://developers.google.com/protocol-buffers/docs/proto3](https://developers.google.com/protocol-buffers/docs/proto3)了解更多。
+BUBI区块链是用protocol buffer 3序列化数据的，protocol buffer 3是google推出的数据序列化协议，您如果不了解protocol buffer 3，请点击[https://developers.google.com/protocol-buffers/docs/proto3](https://developers.google.com/protocol-buffers/docs/proto3)了解更多。
 我们使用的所有数据格式都能在源码的```src\proto```目录中找到。其中chain.proto文件中定义的数据是和交易、区块、账号密切相关的。 
 
 ### protocol buffer 3和json
@@ -75,7 +75,7 @@ http接口中的数据都是json格式的，这些格式都是由protocolbuffer�
 
 ### websocket和http
 
-CHAIN 区块链提供了websocket和http 两种API接口。您可以在 安装目录/config/config.json 文件种找到`"webserver"`和`"wsserver"`两个对象,它们指定了http服务端口和websocket服务端口。
+BUBI 区块链提供了websocket和http 两种API接口。您可以在 安装目录/config/config.json 文件种找到`"webserver"`和`"wsserver"`两个对象,它们指定了http服务端口和websocket服务端口。
 
 ```json
     "webserver":
@@ -784,7 +784,7 @@ POST /getTransactionBlob
 }
 ```
 ### 调用合约
-在智能合约模块的设计中，我们提供了沙箱环境来进行调试合约，且调试过程中不会更改区块链和合约的状态。在 CHAIN 链上，我们为用户提供了 callContract 接口来帮助用户来调试智能合约，智能合约可以是公链上已存的，也可以是通过参数上传本地的合约代码进行测试，使用 callContract 接口不会发送交易，也就无需支付上链手续费。
+在智能合约模块的设计中，我们提供了沙箱环境来进行调试合约，且调试过程中不会更改区块链和合约的状态。在 BUBI 链上，我们为用户提供了 callContract 接口来帮助用户来调试智能合约，智能合约可以是公链上已存的，也可以是通过参数上传本地的合约代码进行测试，使用 callContract 接口不会发送交易，也就无需支付上链手续费。
 
 ```text
    POST /callContract

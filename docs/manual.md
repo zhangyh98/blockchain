@@ -1,6 +1,6 @@
 English | [中文](manual_CN.md) 
 
-# __CHAIN Blockchain Manual Doc__
+# __BUBI Blockchain Manual Doc__
 
 <!-- TOC -->
 - [__Compile__](#compile)
@@ -43,10 +43,9 @@ English | [中文](manual_CN.md)
 
 ## __Compile__ 
 
-If you don't want to compile the source code, you can use the archive package directly, [archive package download](https://github.com/bubicn/bubichain-x/releases "download")，[use archive packet deploy](#use-archive-packet-deploy)
 
 ### Linux
-CHAIN is currently available for Ubuntu, Centos and most of the operating systems, it is recommended that you have Ubuntu 14.04 or Centos 7. The following demo is based on Ubuntu 14.04 .
+BUBICHAIN is currently available for Ubuntu, Centos and most of the operating systems, it is recommended that you have Ubuntu 14.04 or Centos 7. The following demo is based on Ubuntu 14.04 .
 
 - Dependencies
 
@@ -64,13 +63,13 @@ sudo apt-get install unzip
 - Compilation
 ```bash
 ##After the first download of the code, you have to install related dependencies from the server for initializing the development environment.
-cd chain/build/
+cd bubichain-x/build/
 ./install-build-deps-linux.sh
 cd ../
 make
 ```
 
-Executable program dir:chain/bin
+Executable program dir:bubichain/bin
 
 ### MAC
 - Depending on MAC OS X 10.11.4 or later
@@ -96,20 +95,20 @@ brew install wget
  ```
 bash
 #Downloading the code at the first time, you have to install related dependencies from the server for initializing the development environment.
-cd chain/build/
+cd bubichain-x/build/
 ./install-build-deps-mac.sh
 cd ../
 make
  ```
 
-Temporary executable program dir:chain/bulid/mac/
+Temporary executable program dir:bubichain/bulid/mac/
 
-Executable program dir:chain/bin/
+Executable program dir:bubichain/bin/
 
 ### Windows
 - Supports WinXP/2003/Vista/7/8/10 to building，Recommended Win10
 - Install Visual Studio Ultimate 2013
-- Compile `buchain\build\win32\Chain.vs12.sln` with VS, then get the executable program in the dir `chain\build\win32\dbin`
+- Compile `bubichain-x\build\win32\Chain.vs12.sln` with VS, then get the executable program in the dir `bubichain-x\build\win32\dbin`
 - After the first download of the code, you have to install related dependencies from the server to initialize the development environment. Enter the dir `build`, and double click the following:`install-build-deps-win32.bat`.
 
 ## Deployment
@@ -122,57 +121,14 @@ The deployment on Windows is almost identical to Linux. (Subject to Linux)
 ### __Installation on Linux__
 #### __Use compile mode deploy__
 ```bash
-cd chain
+cd bubichain-x
 make install
 ```
 
-Install under `/usr/local/buchain/`
+Install under `/usr/local/bubichain/`
 
 Deploy ok!
 
-#### __Use archive packet deploy__
-
-This is another deployment, using the archive packet.
-
-Extract files
-
-Copy buchain-`1.0.0.x`-linux-x64.tar.gz to /usr/local/
-
-    cd /usr/local/
-    //Note the name of the actual version of the package 1.0.0.x.
-    tar xzvf buchain-1.0.0.x-linux-x64.tar.gz
-
-Registration service
-
-    ln -s /usr/local/buchain/scripts/chain /etc/init.d/chain 
-    ln -s /usr/local/buchain/scripts/chaind /etc/init.d/chaind 
-
-Modify startup path
-
-Open ./buchain/scripts/chain 和 ./buchain/scripts/chaind 
-
-Modify `install_dir` to Buchain's deployment path
-
-    install_dir=/usr/local/buchain 
-
-Setup startup
-
-    #Execute the following commands separately.（level: 1~5）
-    ln -s -f /etc/init.d/chaind /etc/rc1.d/S99chaind 
-    ln -s -f /etc/init.d/chaind /etc/rc2.d/S99chaind
-    ln -s -f /etc/init.d/chaind /etc/rc3.d/S99chaind 
-    ln -s -f /etc/init.d/chaind /etc/rc4.d/S99chaind 
-    ln -s -f /etc/init.d/chaind /etc/rc5.d/S99chaind 
-
-Add the following command at the end of the `/etc/rc.local` file.
-
-    /etc/init.d/chaind start
-
-Save and add executable permissions.： 
-
-    chmod +x /etc/rc.local
-
-Deploy ok!
 
 ### __Catalog Structure__
 
@@ -188,7 +144,7 @@ Catalog | Description
 
 ### __Switch to Target Network__
 
-Switch runtime environment of CHAIN manually:
+Switch runtime environment of BUBICHAIN manually:
 
 1. Stop chain program
 
@@ -198,7 +154,7 @@ Switch runtime environment of CHAIN manually:
 2. Replace configuration profile
 
 ```bash
-    cd /usr/local/buchain/config/
+    cd /usr/local/bubichain/config/
     #Copy the target configuration profile
     cp config-testnet.json config.json  
 
@@ -339,7 +295,7 @@ All the private information of configuration profile is encrypted, and the decry
 - command `./bin/chain --aes-crypto [key]`
 
 ```bash
-[root@localhost buchain]# ./bin/chain --aes-crypto root 
+[root@localhost bubichain]# ./bin/chain --aes-crypto root 
 e2ba44bf0b27f0acbe7b5857e3bc6348
 ```
 - The information of configuration needs to be encrypted
@@ -413,12 +369,12 @@ Running status:service chain status
 ```
 ### Drop Database
 ```bash
-buchain/bin/chain --dropdb
+bubichain/bin/chain --dropdb
 ```
 ### Create Hard Fork
 ```bash
-buchain/bin/chain --create-hardfork
-buchain/bin/chain --clear-consensus-status
+bubichain/bin/chain --create-hardfork
+bubichain/bin/chain --clear-consensus-status
 ```
 - As the node has joined an existing blockchain that would like to run a standalone blockchain, a hard fork can be created with the commands above.  After hard fork, there is only one validation node(local node)on the new blockchain.
 
@@ -442,4 +398,4 @@ Create hard fork ledger successful, seq(20), consensus value hash(**7aa332f05748
 - Start service
 
 ### Data Storage Dir
-`buchain/data` is the default dir to store CHAIN blockchain data. You can change the dir as you need in the configuration profile.
+`bubichain/data` is the default dir to store BUBI blockchain data. You can change the dir as you need in the configuration profile.

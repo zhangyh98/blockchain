@@ -1,6 +1,6 @@
 [English](manual.md) | 中文
 
-# __CHAIN区块链使用文档__
+# __BUBI区块链使用文档__
 
 <!-- TOC -->
 
@@ -36,7 +36,6 @@
 
 ## __编译__
 
-__如果不想编译源码，可以直接使用安装包部署，[安装包下载]( https://github.com/bubicn/bubichain-x/releases "download")，下载完成后参考[__使用安装包安装__](#使用安装包安装)__
 
 ### Linux
 支持 Ubuntu、Centos 等大多数操作系统编译，推荐使用版本Ubuntu 14.04，Centos 7。下面编译步骤以 Ubuntu 14.04 示例
@@ -56,13 +55,13 @@ sudo apt-get install unzip
 - 编译
 ```bash
 ##首次下载代码后，需要初始化开发环境，从服务器下载相关依赖库
-cd chain/build/
+cd bubichain-x/build/
 ./install-build-deps-linux.sh
 cd ../
 make
 ```
 
-生成的可执行文件目录：chain/bin
+生成的可执行文件目录：bubichain/bin
 
 ### MAC
 - 支持 MAC OS X 10.11.4 及以上系统版本
@@ -88,20 +87,20 @@ brew install wget
  ```
 bash
 #首次下载代码后，需要初始化开发环境，从服务器下载相关依赖库
-cd chain/build/
+cd bubichain-x/build/
 ./install-build-deps-mac.sh
 cd ../
 make
 ```
 
-生成的编译临时目录:chain/bulid/mac/
+生成的编译临时目录:bubichain-x/bulid/mac/
 
-生成的可执行文件目录：chain/bin/
+生成的可执行文件目录：bubichain/bin/
 
 ### Windows
 - 支持 WinXP/2003/Vista/7/8/10平台编译，推荐使用 Win10
 - 安装 Visual Studio Ulimate 2013
-- 打开 buchain\build\win32\Chain.vs12.sln, 使用 VS 自带编译器编译即可。生成的可执行文件在chain\build\win32\dbin 目录下。
+- 打开 bubichain-x\build\win32\Chain.vs12.sln, 使用 VS 自带编译器编译即可。生成的可执行文件在bubichain-x\build\win32\dbin 目录下。
 - 首次下载代码后，需要初始化开发环境，从服务器下载相关依赖库，进入 build目录，双击执行 install-build-deps-win32.bat 脚本。
 
 ## __部署__
@@ -115,56 +114,14 @@ Windows 部署与 Linux 下部署基本类似，本示例以 Linux 为准。
 
 #### __使用编译方式安装__
 ```bash
-cd chain
+cd bubichain-x
 make install
 ```
-服务将安装在/usr/local/buchain/目录下
+服务将安装在/usr/local/bubichain/目录下
 
 安装完成。
 
-#### __使用安装包安装__
 
-这里介绍另外一种安装方式，使用安装包安装：[安装包下载]( https://github.com/bubicn/bubichain-x/releases/ "download")
-
-解压
-
-拷贝 buchain-`1.0.0.x`-linux-x64.tar.gz 到 /usr/local/
-
-    cd /usr/local/
-    //需要注意用实际版本包 1.0.0.x 的名字
-    tar xzvf buchain-1.0.0.x-linux-x64.tar.gz
-
-注册服务
-
-    ln -s /usr/local/buchain/scripts/chain /etc/init.d/chain 
-    ln -s /usr/local/buchain/scripts/chaind /etc/init.d/chaind 
-
-修改服务启动路径
-
-打开 ./buchain/scripts/chain 和 ./buchain/scripts/chaind 
-
-将 `install_dir` 变量值修改成安装 Buchain 安装路径 
-
-    install_dir=/usr/local/buchain 
-
-设置开机启动
-
-    #分别执行如下命令（级别1~5）
-    ln -s -f /etc/init.d/chaind /etc/rc1.d/S99chaind 
-    ln -s -f /etc/init.d/chaind /etc/rc2.d/S99chaind
-    ln -s -f /etc/init.d/chaind /etc/rc3.d/S99chaind 
-    ln -s -f /etc/init.d/chaind /etc/rc4.d/S99chaind
-    ln -s -f /etc/init.d/chaind /etc/rc5.d/S99chaind
-
-在 `/etc/rc.local` 文件末尾追加如下命令
-
-    /etc/init.d/chaind start
-
-保存后添加执行可执行权限： 
-
-    chmod +x /etc/rc.local
-
-安装完成。
 ### __目录结构__
 
 目录 | 描述 
@@ -179,7 +136,7 @@ make install
 
 ### __切换运行环境__
 
-如果需要切换 CHAIN 的运行环境，需要手动替换配置文件。步骤如下：
+如果需要切换 BUBI 的运行环境，需要手动替换配置文件。步骤如下：
 
 1、首先需要停止 chain 程序，
 ```bash
@@ -187,7 +144,7 @@ make install
 ```
 2、替换配置文件
 ```bash
-    cd /usr/local/buchain/config/
+    cd /usr/local/bubichain/config/
     #拷贝目标环境配置文件
     cp config-testnet.json config.json  
 
@@ -283,7 +240,7 @@ config.json
 
 `validation_address` 和 `validation_private_key` 可以通过 chain 程序命令行工具获得，请妥善保存该账号信息，丢失后将无法找回。
 ```
-    [root@chain ~]# cd /usr/local/buchain/bin
+    [root@chain ~]# cd /usr/local/bubichain/bin
     [root@chain bin]#./chain --create-account
 
     {
@@ -318,7 +275,7 @@ config.json
 ```json
     "logger":
     {
-        "path":"log/buchain.log", // 日志目录
+        "path":"log/chain.log", // 日志目录
         "dest":"FILE|STDOUT|STDERR", //输出文件分类
         "level":"TRACE|INFO|WARNING|ERROR|FATAL",//日志级别
         "time_capacity":1, //时间容量，天
@@ -517,12 +474,12 @@ p2p 的 known_peers 必须为其他已知节点的 IP 和端口，用于节点�
 
 ### 清空数据库
 ```bash
-buchain/bin/chain --dropdb
+bubichain/bin/chain --dropdb
 ```
 ### 创建硬分叉
 ```bash
-buchain/bin/chain --create-hardfork
-buchain/bin/chain --clear-consensus-status
+bubichain/bin/chain --create-hardfork
+bubichain/bin/chain --clear-consensus-status
 ```
 当已经加入其他区块链网络的节点想单独运行一条链时，可以执行以上命令创建硬分叉
 执行后，新的区块链网络只有一个验证节点为本节点。

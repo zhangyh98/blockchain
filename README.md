@@ -3,8 +3,8 @@
 
 
  
-## __What is BUBICHAIN__
-BUBICHAIN is focusing on next generation platform of public Blockchain infrastructure and building a future ecosystem of Ubiquitous Trust Network. Therefore, value will be transferred freely on Blockchain just as information is transferred freely on Internet today. Lots of decentralized applications, such as digital assets and Internet of things, can be developed and deployed rapidly over BUBICHAIN network.
+## __What is BUBI__
+BUBI is focusing on next generation platform of public Blockchain infrastructure and building a future ecosystem of Ubiquitous Trust Network. Therefore, value will be transferred freely on Blockchain just as information is transferred freely on Internet today. Lots of decentralized applications, such as digital assets and Internet of things, can be developed and deployed rapidly over BUBI network.
 
 ## __Features__
 - Flexible multi-asset and multi-operator structure of accounts and transactions.
@@ -29,4 +29,4 @@ BUBICHAIN is focusing on next generation platform of public Blockchain infrastru
  - [development document](docs/develop.md "") 
 
 ## __License__
-BUBI blockchain is under the bubichain license.
+BUBI blockchain is under the bubi license.

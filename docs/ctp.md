@@ -1,17 +1,17 @@
-# Chain CTP1.0 Token 标准
+# BUBI CTP1.0 Token 标准
 
 ## 简介
 
-CTP1.0(Contract Token Protocol) 指基于 CHAIN 合约发行 token 的标准协议。该协议提供了转移 token 的基本功能，并允许 token 授权给第三方使用。
+CTP1.0(Contract Token Protocol) 指基于 BUBI 合约发行 token 的标准协议。该协议提供了转移 token 的基本功能，并允许 token 授权给第三方使用。
 
 ## 目标
 
-标准接口可以让 Chain 上的任何 token 被其他应用程序使用，比如钱包和交易所。
+标准接口可以让 BUBI 上的任何 token 被其他应用程序使用，比如钱包和交易所。
 
 
 ## 规则
 
-Chain 智能合约由 javascript 实现,包含初始化函数 init 和两个入口函数 main、query 。init 函数用于合约创建时初始化、main 函数主要负责数据写入，query 函数负责数据查询。
+BUBI 智能合约由 javascript 实现,包含初始化函数 init 和两个入口函数 main、query 。init 函数用于合约创建时初始化、main 函数主要负责数据写入，query 函数负责数据查询。
 
 
 ## 智能合约变量

@@ -1,10 +1,10 @@
 English | [中文](develop_CN.md) 
 
-# CHAIN Blockchain Development Kit
+# BUBI Blockchain Development Kit
 
 <!-- TOC -->
 
-- [CHAIN Blockchain Development Kit](#chain-blockchain-development-kit)
+- [BUBI Blockchain Development Kit](#bubi-blockchain-development-kit)
     - [Basic Knowledge](#basic-knowledge)
         - [What is Protocol Buffer3](#what-is-protocol-buffer3)
         - [Protocol Buffer3 and JSON](#protocol-buffer3-and-json)
@@ -67,7 +67,7 @@ English | [中文](develop_CN.md)
 
 ### What is Protocol Buffer3
 
-CHAIN Blockchain serializes data with `protocol buffer 3`, which is a general serialization protocol launched by Google. Click this [link](https://developers.google.com/protocol-buffers/docs/proto3) to get more information. All the data format we use are under the dir: `src\proto`. Other data with reference to transaction, block ,account are in the `chain.proto` file. 
+BUBI Blockchain serializes data with `protocol buffer 3`, which is a general serialization protocol launched by Google. Click this [link](https://developers.google.com/protocol-buffers/docs/proto3) to get more information. All the data format we use are under the dir: `src\proto`. Other data with reference to transaction, block ,account are in the `chain.proto` file. 
 
 ### Protocol Buffer3 and JSON
 
@@ -75,7 +75,7 @@ Data from http api are in json format, and are transferred automatically by prot
 
 ### Websocket and http
 
-CHAIN Blockchain offers two types of api: **websocket** and **http**. These two objects assign the service port, and they can be found in the downloaded dir:`/config/config.json`. 
+BUBI Blockchain offers two types of api: **websocket** and **http**. These two objects assign the service port, and they can be found in the downloaded dir:`/config/config.json`. 
 
 ```json
     "webserver":
@@ -145,7 +145,7 @@ HTTP GET host:36002/getAccount?address=buQs9npaCq9mNFZG18qu88ZcmXYqd6bqpTU3
 HTTP GET /createKeyPair
 ```
 
-Function: This api is only for testing, please DO NOT use this api in the production environment (substitute SDK or Command for api). If the server is malicious, using the api will risk you private key in exposure. This api only create a new public-private key pair which does not write into chain chain.If you want to write, you can do any transaction of [Creating Account](#creating-account), [Transferring Assets](#transferring-assets) ,[Transferring BU Assets](#transferring-bu-assets) for the new key pair.
+Function: This api is only for testing, please DO NOT use this api in the production environment (substitute SDK or Command for api). If the server is malicious, using the api will risk you private key in exposure. This api only create a new public-private key pair which does not write into bubi chain.If you want to write, you can do any transaction of [Creating Account](#creating-account), [Transferring Assets](#transferring-assets) ,[Transferring BU Assets](#transferring-bu-assets) for the new key pair.
 
 return,
 
@@ -787,7 +787,7 @@ return,
 }
 ```
 ### Call Smart Contract
-In the smart contract module, we designed a sandbox for debugging the contract. You won't alter any real status of blockchain or smart contract in the debugging process. CHAIN Blockchain offers `callContract`api to help developers debug the smart contract. The smart contract can be stored on the blockchain or uploaded from localhost. Calling `callContract`api won't send any transactions, so there is no transaction fee to pay.
+In the smart contract module, we designed a sandbox for debugging the contract. You won't alter any real status of blockchain or smart contract in the debugging process. BUBI Blockchain offers `callContract`api to help developers debug the smart contract. The smart contract can be stored on the blockchain or uploaded from localhost. Calling `callContract`api won't send any transactions, so there is no transaction fee to pay.
 
 ```text
    POST /callContract
