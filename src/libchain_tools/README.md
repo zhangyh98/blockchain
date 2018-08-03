@@ -3,7 +3,7 @@ English | [中文](README_CN.md)
 # libchain_tools
 
 ## Introduction
-The chain tool library is provided as a third-party library to implement operations such as wallet control, account management , and transaction signature. The features are listed below:
+The BUBICHAIN tool library is provided as a third-party library to implement operations such as wallet control, account management , and transaction signature. The features are listed below:
 - Cross-platform. The c++ implementation is packaged into a third-party library for developers to use.
 - Lightweight tool. Node data synchronization is not included.
 - Safe operation. The private key information will not be revealed during use.

@@ -1,6 +1,6 @@
 [English](keypair.md) | 中文
 
-# BUBI Keypair 文档
+# BUBICHAIN Keypair 文档
 
 ## 概述
 本文档详细介绍了Keypair（公、私钥对）的生成过程以及在此基础上如何生成地址（address）并对交易签名，介绍了执行交易调用的两种接口方式以及相关流程，提供了多种ProtoBuf数据结构参考信息，最后以示例的方式详细介绍了两种交易提交方式，即调用接口生成transaction_blob和自己生成transaction_blob。
@@ -8,7 +8,7 @@
 ## 术语定义
 本章节详细介绍了该文档中用到的术语。
 ### Keypair
-keypair是BUBICHAIN-X工程中生成公钥、私钥、地址及签名的接口。在签名过程中仅支持ED25519签名算法。
+keypair是BUBICHAIN工程中生成公钥、私钥、地址及签名的接口。在签名过程中仅支持ED25519签名算法。
 ### 私钥
 私钥是通过算法生成的一串字符串，是生成公钥和地址的前提条件，同时也是完成签名的基本要素。私钥生成后不能更改，一旦丢失将无法找回，因此需要妥善保管。
 ### 公钥
@@ -18,7 +18,7 @@ keypair是BUBICHAIN-X工程中生成公钥、私钥、地址及签名的接口�
 ### 签名
 签名是指通过算法和私钥对交易数据进行加密确认并得到签名数据的过程。用户可以通过签名数据判断交易数据的完整性和正确性。
 ### 交易
-在BUBICHAIN-X中所有修改区块链数据的操作都称为交易，比如发行资产、转移资产、发送BU、创建账号、设置metadata、设置权限等都是交易。
+在BUBICHAIN中所有修改区块链数据的操作都称为交易，比如发行资产、转移资产、发送BU、创建账号、设置metadata、设置权限等都是交易。
 ### Transaction Blob
 Transaction Blob是指对一个交易对象进行序列化处理之后得到的16进制字符串。交易序列化是指通过ProtoBuf数据结构将交易对象的状态信息转换成可以存储和传输的字符串的过程。
 ### Raw Private Key
@@ -131,7 +131,7 @@ a46ee590a84abdeb8cc38ade1ae8e8a2c71bb69bdc4cd7dc0de1b74b37e2cbd1696229687f80dff4
 ### 调用接口生成transation_blob
 >**注意**：由于transaction_blob很可能被截取和篡改，因此不建议用这种方式生成transaction_blob。
 
-如果需要调用接口生成transaction_blob、签名并提交交易，请查看bubi的开发文档，地址如下：
+如果需要调用接口生成transaction_blob、签名并提交交易，请查看BUBICHAIN的开发文档，地址如下：
 
 [develop.md](./develop.md)
  

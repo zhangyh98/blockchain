@@ -1,7 +1,7 @@
 English | [中文](README_CN.md) 
 
 ## Introduction
-The definition module for serialized message of `CHAIN`. Serialization and deserialization of data are used in the internal communication, node communication, and permanent storage of the blockchain program. `CHAIN` uses `protobuf` as the serialization tool. When using this module, first define the `message` structure according to the syntax standard defined by `protobuf`, then call the `protobuf` compilation tool to compile the file defining the `message` structure into the `C++` source file. Then, other source files of `CHAIN` can directly call the `message` source file compiled by `protobuf`.
+The definition module for serialized message of `BUBICHAIN`. Serialization and deserialization of data are used in the internal communication, node communication, and permanent storage of the blockchain program. `BUBICHAIN` uses `protobuf` as the serialization tool. When using this module, first define the `message` structure according to the syntax standard defined by `protobuf`, then call the `protobuf` compilation tool to compile the file defining the `message` structure into the `C++` source file. Then, other source files of `BUBICHAIN` can directly call the `message` source file compiled by `protobuf`.
 
 ## Module Structure
 File | Function
@@ -14,4 +14,4 @@ File | Function
 [overlay.proto](./overlay.proto)       | The `overlay` module is a self-contained or serializable data structure used by the module of the `overlay` communication, including communication status, `peer` information, and account information.
 
 ## Other
-There are other folders in the `proto` directory, such as `php`, `go`, `python`, etc., which are serialized source files of different languages ​​compiled by `*.proto` files to support `SDK` calls in different languages ​​for CHAIN.
+There are other folders in the `proto` directory, such as `php`, `go`, `python`, etc., which are serialized source files of different languages ​​compiled by `*.proto` files to support `SDK` calls in different languages ​​for BUBICHAIN.

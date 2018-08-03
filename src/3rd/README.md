@@ -3,7 +3,7 @@ English | [中文](README_CN.md)
 # Third Party Library
 
 ## Introduction
-The third party library implements various functions in an open source manner, and CHAIN integrates and calls these libraries. Using a three-party library has the following advantages:
+The third party library implements various functions in an open source manner, and BUBICHAIN integrates and calls these libraries. Using a three-party library has the following advantages:
 - Rich functions
 - Open source code
 - Reduce repeated development

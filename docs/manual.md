@@ -1,6 +1,6 @@
 English | [中文](manual_CN.md) 
 
-# __BUBI Blockchain Manual Doc__
+# __BUBICHAIN Manual Doc__
 
 <!-- TOC -->
 - [__Compile__](#compile)
@@ -398,4 +398,4 @@ Create hard fork ledger successful, seq(20), consensus value hash(**7aa332f05748
 - Start service
 
 ### Data Storage Dir
-`bubichain/data` is the default dir to store BUBI blockchain data. You can change the dir as you need in the configuration profile.
+`bubichain/data` is the default dir to store BUBICHAIN data. You can change the dir as you need in the configuration profile.
