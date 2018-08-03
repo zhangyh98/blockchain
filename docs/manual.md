@@ -69,7 +69,7 @@ cd ../
 make
 ```
 
-Executable program dir:bubichain/bin
+Executable program dir:bubichain-x/bin
 
 ### MAC
 - Depending on MAC OS X 10.11.4 or later
